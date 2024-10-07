@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/background_light">
+
+    <!-- Encabezado con la categoría centrada -->
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="16dp"
+        android:text="Animales Salvajes"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"/>
+
+    <!-- Contador de vidas e icono en la parte superior derecha -->
+    <RelativeLayout
+        android:id="@+id/lifeCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp">
+
+        <!-- Icono de vida personalizado -->
+        <!-- Cambiar a un icono más representativo como un corazón -->
+
+        <!-- Número de vidas restantes -->
+        <TextView
+            android:id="@+id/tvLifeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="3"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif-medium"/>
+
+
+    </RelativeLayout>
+
+    <!-- Palabra con guiones y letras adivinadas, centrada -->
+    <TextView
+        android:id="@+id/tvWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCategory"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:letterSpacing="0.2"
+        android:paddingBottom="20dp"
+        android:text="_ _ _ _ _ _ _ _"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="40sp"
+        android:fontFamily="monospace"
+        android:textStyle="bold"/>
+
+    <!-- Entrada para la letra desde el teclado -->
+    <EditText
+        android:id="@+id/etLetterInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvWord"
+        android:layout_centerHorizontal="true"
+        android:hint="Ingresa una letra"
+        android:inputType="text"
+        android:maxLength="1"
+        android:imeOptions="actionDone"
+        android:textSize="24sp"
+        android:padding="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginTop="20dp"
+        android:textColorHint="@android:color/darker_gray"/>
+
+    <!-- Botón para intentar de nuevo -->
+    <TextView
+        android:id="@+id/btnTryAgain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etLetterInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Intentar de nuevo"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+</RelativeLayout>
